@@ -1,0 +1,12 @@
+{
+  "domain": "jobs_ai",
+  "name": "Jobs AI Switch",
+  "codeowners": ["@Daviddws"],
+  "config_flow": true,
+  "dependencies": [],
+  "documentation": "https://github.com/Daviddws/jobs-ai-switch-ha",
+  "iot_class": "cloud_polling",
+  "issue_tracker": "https://github.com/Daviddws/jobs-ai-switch-ha/issues",
+  "requirements": [],
+  "version": "0.1.0"
+}

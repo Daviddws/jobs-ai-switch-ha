@@ -1,0 +1,56 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Connect to Jobs",
+        "description": "The Jobs address and the AI switch secret (AI_SWITCH_SECRET in the server's .env). Pick the phone that gets the Approve / Deny alert when you tap Ask to turn on in Jobs.",
+        "data": {
+          "url": "Jobs address",
+          "secret": "Switch secret",
+          "notify_service": "Phone"
+        }
+      },
+      "reauth_confirm": {
+        "title": "New switch secret",
+        "description": "Jobs refused the secret. Enter the one now in the server's .env (AI_SWITCH_SECRET).",
+        "data": {
+          "secret": "Switch secret"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Can't reach Jobs. Check the address.",
+      "invalid_auth": "Jobs refused the secret. It must match AI_SWITCH_SECRET on the server.",
+      "no_switch": "Jobs has no AI switch yet: AI_SWITCH_SECRET isn't set on the server."
+    },
+    "abort": {
+      "already_configured": "This Jobs address is already set up.",
+      "reauth_successful": "The new secret works."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Phone",
+        "description": "The phone that gets the Approve / Deny alert when you tap Ask to turn on in Jobs.",
+        "data": {
+          "notify_service": "Phone"
+        }
+      }
+    }
+  },
+  "entity": {
+    "switch": {
+      "ai": { "name": "AI" }
+    },
+    "sensor": {
+      "off_at": { "name": "Turns off at" }
+    },
+    "binary_sensor": {
+      "asked": { "name": "Ask waiting" }
+    },
+    "button": {
+      "deny": { "name": "Deny ask" }
+    }
+  }
+}
